@@ -64,7 +64,7 @@ get_header();
 		'category_name' => 'portfolio', 
 		'posts_per_page' => 6, 
 		'orderby' => 'date', 
-		'order' => 'ASC' 
+		'order' => 'DESC' 
 	));
 	global $post;
 	if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
