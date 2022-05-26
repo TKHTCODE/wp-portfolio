@@ -17,7 +17,7 @@ get_header();
 ?>
 
 <div class="video-container">
-	<video src="https://taka-portfolio.s3.us-west-1.amazonaws.com/bg-portfolio.mp4" autoplay playsinline muted loop></video>
+	<video style="width:100%;" src="https://taka-portfolio.s3.us-west-1.amazonaws.com/bg-portfolio.mp4" autoplay playsinline muted loop></video>
 	<div class="navigationbar">
 		<h1 class="sitetitle"><?php bloginfo('name'); ?></h1>
 		<!-- <p><?php echo get_bloginfo('description', 'display'); ?></p> -->
