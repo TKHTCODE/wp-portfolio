@@ -6,6 +6,33 @@ body {
   margin: 0;
   background-color: #00020e;
 }
+.skills {
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+  padding: 72px 0;
+  transition: opacity 1s, visibility 1s, transform 1s;
+  background: linear-gradient(-45deg, #f9c2eb, #a8c2ee, #c2f9d0, #ffdea5) fixed;
+  background-size: 800% 800%;
+  animation: GradietionAnimation 9s ease infinite;
+}
+
+.skills-title{
+  color: #00020e;
+  text-decoration: none;
+  font-size: 72px;
+}
+@keyframes GradietionAnimation { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+/* フェードイン時に入るクラス */
+.is-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
 
 .sitetitle {
   font-size: 48px;

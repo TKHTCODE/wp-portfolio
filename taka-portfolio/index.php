@@ -60,17 +60,41 @@ get_header();
 	<h1 style="color: white; font-size: 72px;">My works</h1>
 	<?php
 	$cat_posts = get_posts(array(
-		'post_type' => 'post', 
-		'category_name' => 'portfolio', 
-		'posts_per_page' => 6, 
-		'orderby' => 'date', 
-		'order' => 'DESC' 
+		'post_type' => 'post',
+		'category_name' => 'portfolio',
+		'posts_per_page' => 6,
+		'orderby' => 'date',
+		'order' => 'DESC'
 	));
 	global $post;
 	if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
 			<div class="projects">
 
 				<h3><a class="projects-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+				<?php
+				the_post_thumbnail('large');
+				?>
+				<h2 style="padding:24px 96px;"><?php echo get_the_content(); ?></h3>
+
+			</div>
+	<?php endforeach;
+	endif;
+	wp_reset_postdata(); ?>
+
+
+	<?php
+	$cat_posts = get_posts(array(
+		'post_type' => 'post',
+		'category_name' => 'skills',
+		'posts_per_page' => 6,
+		'orderby' => 'date',
+		'order' => 'DESC'
+	));
+	global $post;
+	if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
+			<div class="skills">
+
+				<h3><a class="skills-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<?php
 				the_post_thumbnail('large');
 				?>
@@ -95,6 +119,16 @@ get_header();
 <script>
 	$(function() {
 		$(window).scroll(function() {
+
+			const windowHeight = $(window).height();
+			const scroll = $(window).scrollTop();
+
+			$('.skills').each(function() {
+				const targetPosition = $(this).offset().top;
+				if (scroll > targetPosition - windowHeight + 100) {
+					$(this).addClass("is-fadein");
+				}
+			});
 
 			//Show Projects
 			if ($(this).scrollTop() > 1000) {
