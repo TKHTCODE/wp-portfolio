@@ -19,26 +19,44 @@ img{
   height: 100%;
   object-fit: cover;
 }
-.skills {
-  opacity: 0;
-  visibility: hidden;
-  padding: 72px 0;
-  transition: opacity 1s, visibility 1s, transform 1s;
-  background: linear-gradient(-45deg, #f9c2eb, #a8c2ee, #c2f9d0, #ffdea5) fixed;
-  background-size: 200% 200%;
-  animation: GradietionAnimation 5s ease infinite;
+
+.section-title{
+  color: white;
+  font-size: 72px;
 }
+
+.bgcnc{
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  }
+  .ibgcnc{
+  position:absolute;
+  left: -390%;
+  top: -390%;
+  width: 1000%;
+  height: 1000%;
+  background-image:
+  repeating-conic-gradient(#ffff00,#00020e,#00FF00,#00020e,#0000ff,#00020e,#ffff00 120deg);
+  animation:bgcnca 60s linear 0s infinite;
+  }
+  .i2bgcnc{
+  position:relative;
+  padding:0.6em;
+  color:white;
+  text-shadow:1px 1px 0px black;
+  }
 
 .skills-title{
   color: #00020e;
   text-decoration: none;
   font-size: 72px;
 }
-@keyframes GradietionAnimation { 
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
+@keyframes bgcnca{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+  }
 .is-fadein {
   opacity: 1;
   visibility: visible;

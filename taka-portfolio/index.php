@@ -57,7 +57,8 @@ get_header();
 		</div>
 	</div>
 
-	<h1 style="color: white; font-size: 72px;">My works</h1>
+
+	<h1 class="section-title">My works</h1>
 	<?php
 	$cat_posts = get_posts(array(
 		'post_type' => 'post',
@@ -92,13 +93,13 @@ get_header();
 	));
 	global $post;
 	if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
-			<div class="skills">
+			<div class="bgcnc">
+				<div class="ibgcnc"> </div>
+				<div class="i2bgcnc">
+					<h3 class="section-title"><?php the_title(); ?></a></h3>
+					<h2><?php echo get_the_content(); ?></h3>
+				</div>
 
-				<h3><a class="skills-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-				<?php
-				the_post_thumbnail('full');
-				?>
-				<h2><?php echo get_the_content(); ?></h3>
 
 			</div>
 	<?php endforeach;
