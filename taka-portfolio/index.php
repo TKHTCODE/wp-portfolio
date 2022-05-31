@@ -74,7 +74,7 @@ get_header();
 				<?php
 				the_post_thumbnail();
 				?>
-				<h2 style="padding:24px 96px;"><?php echo get_the_content(); ?></h3>
+				<h2><?php echo get_the_content(); ?></h3>
 
 			</div>
 	<?php endforeach;
@@ -98,7 +98,7 @@ get_header();
 				<?php
 				the_post_thumbnail('full');
 				?>
-				<h2 style="padding:24px 96px;"><?php echo get_the_content(); ?></h3>
+				<h2><?php echo get_the_content(); ?></h3>
 
 			</div>
 	<?php endforeach;
