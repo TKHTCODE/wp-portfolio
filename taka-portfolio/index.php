@@ -72,7 +72,7 @@ get_header();
 
 				<h3><a class="projects-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<?php
-				the_post_thumbnail('large');
+				the_post_thumbnail();
 				?>
 				<h2 style="padding:24px 96px;"><?php echo get_the_content(); ?></h3>
 
@@ -96,7 +96,7 @@ get_header();
 
 				<h3><a class="skills-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<?php
-				the_post_thumbnail('large');
+				the_post_thumbnail('full');
 				?>
 				<h2 style="padding:24px 96px;"><?php echo get_the_content(); ?></h3>
 
