@@ -4563,6 +4563,12 @@ img {
   margin: 24px 0px;
 }
 
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+}
+
 .projects-title:after {
   position: absolute;
   bottom: 0;
