@@ -7,6 +7,9 @@ body {
   margin: 0;
   background-color: #00020e;
   overflow-x: hidden;
+  a,p{
+    word-wrap: break-word;
+  }
 }
 
 img{
