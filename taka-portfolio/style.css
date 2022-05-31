@@ -34,7 +34,7 @@ img {
   transition: opacity 1s, visibility 1s, transform 1s;
   transition: opacity 1s, visibility 1s, transform 1s, -webkit-transform 1s;
   background: linear-gradient(-45deg, #f9c2eb, #a8c2ee, #c2f9d0, #ffdea5) fixed;
-  background-size: 800% 800%;
+  background-size: 400% 400%;
   -webkit-animation: GradietionAnimation 6s ease infinite;
           animation: GradietionAnimation 6s ease infinite;
 }
