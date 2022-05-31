@@ -71,7 +71,7 @@ get_header();
 	if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
 			<div class="projects">
 
-				<h3><a class="projects-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+				<h3 class="projects-title"><?php the_title(); ?></h3>
 				<?php
 				the_post_thumbnail();
 				?>

@@ -10,7 +10,8 @@ body {
   overflow-x: hidden;
 }
 
-body a, body p {
+body a,
+body p {
   word-wrap: break-word;
 }
 
@@ -43,7 +44,7 @@ img {
   top: -390%;
   width: 1000%;
   height: 1000%;
-  background-image: repeating-conic-gradient(#ffff00, #00020e, #00FF00, #00020e, #0000ff, #00020e, #ffff00 120deg);
+  background-image: repeating-conic-gradient(#ffff00, #00020e, #00ff00, #00020e, #0000ff, #00020e, #ffff00 120deg);
   -webkit-animation: bgcnca 60s linear 0s infinite;
           animation: bgcnca 60s linear 0s infinite;
 }
@@ -4549,9 +4550,28 @@ img {
   width: 100%;
 }
 
+.projects h3 {
+  margin: 48px;
+}
+
 .projects-title {
-  font-size: 48px;
+  font-size: 2rem;
   text-decoration: none;
+  position: relative;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  margin: 24px 0px;
+}
+
+.projects-title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  content: '';
+  border-radius: 3px;
+  background-image: linear-gradient(70deg, #ffff00, #00ff00, #0000ff, #ff00ff);
 }
 
 .projects a {
@@ -4580,13 +4600,13 @@ img {
 }
 
 .gradation1 {
-  background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00FF00));
-  background: linear-gradient(to right, #ffff00, #00FF00);
+  background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
+  background: linear-gradient(to right, #ffff00, #00ff00);
 }
 
 .gradation2 {
-  background: -webkit-gradient(linear, left top, right top, from(#00FF00), to(#ffff00));
-  background: linear-gradient(to right, #00FF00, #ffff00);
+  background: -webkit-gradient(linear, left top, right top, from(#00ff00), to(#ffff00));
+  background: linear-gradient(to right, #00ff00, #ffff00);
 }
 
 .gradation3 {
