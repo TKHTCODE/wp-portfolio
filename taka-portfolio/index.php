@@ -87,7 +87,7 @@ get_header();
 	$cat_posts = get_posts(array(
 		'post_type' => 'post',
 		'category_name' => 'skills',
-		'posts_per_page' => 6,
+		'posts_per_page' => -1,
 		'orderby' => 'date',
 		'order' => 'DESC'
 	));
